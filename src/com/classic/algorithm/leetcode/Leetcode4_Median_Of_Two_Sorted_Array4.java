@@ -26,7 +26,7 @@ package com.classic.algorithm.leetcode;
 // use the partition function, remove the k/2 element everytime
 // O(log(N+M))
 
-public class MedianOfTwoSortedArray4 {
+public class Leetcode4_Median_Of_Two_Sorted_Array4 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length + nums2.length;
         int k = m/2;
