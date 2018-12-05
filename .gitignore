@@ -1,5 +1,5 @@
 /bin/
+/src/huilab/lab.java
 .settings
 .classpath
 .project
-src/huilab/lab.java
