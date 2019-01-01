@@ -69,8 +69,8 @@ public class Leetcode140WordBreakII {
             }
         }
     }
-
-
+}
+class hello {
     // another method
     public List<String> wordBreak2(String s, List<String> wordDict) {
         return permutation2(wordDict, new HashMap<String, List<String>>(), s);
