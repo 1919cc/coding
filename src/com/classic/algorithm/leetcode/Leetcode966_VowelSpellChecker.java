@@ -14,7 +14,7 @@ public class Leetcode966_VowelSpellChecker {
         for (String word : wordlist) {
             words.add(word);
             
-            String w = capWords.toLowerCase();
+            String w = word.toLowerCase();
             if (!capWords.containsKey(w)) capWords.put(w, word);
             
             String wv = w.replaceAll("[aeiou]", "*");
