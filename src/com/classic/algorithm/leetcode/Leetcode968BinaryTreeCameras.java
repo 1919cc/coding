@@ -1,12 +1,13 @@
 package com.classic.algorithm.leetcode;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
+
 public class Leetcode968BinaryTreeCameras {
+	class TreeNode {
+	    int val;
+	    TreeNode left;
+	    TreeNode right;
+	    TreeNode(int x) { val = x; }
+	}
     private int NOT_MONITER = 0;
     private int MONITER_NOCAM = 1;
     private int MONITER_WITHCAM = 2;
