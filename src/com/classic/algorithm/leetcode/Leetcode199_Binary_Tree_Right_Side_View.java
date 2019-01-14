@@ -27,4 +27,21 @@ public class Leetcode199_Binary_Tree_Right_Side_View {
         helper(node.right, level, curLevel, res);
         helper(node.left, level, curLevel, res);
     }
+    
+    public List<Integer> rightSideView2(TreeNode root) {
+        List<Integer> res = new LinkedList<>();
+        if (root != null) {
+            helper2(root, 0, res);
+        }
+        
+        return res;
+    }
+    
+    public void helper2(TreeNode node, int level, List<Integer> res) {
+        if (node == null) return;
+        if (level >= res.size()) res.add(node.val);
+        
+        helper2(node.right, level+1, res);
+        helper2(node.left, level+1, res);
+    }
 }
