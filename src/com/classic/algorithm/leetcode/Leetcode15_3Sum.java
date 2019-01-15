@@ -13,9 +13,8 @@ public class Leetcode15_3Sum {
         
         Arrays.sort(nums);
         
-        for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], i);
-        }
+        for (int i = 0; i < nums.length; i++)
+            if (nums[i] >= 0) map.put(nums[i], i);
         
         for (int i = 0; i < nums.length && nums[i] <= 0; i++) {
             if (i > 0 && nums[i-1] == nums[i]) continue; // skip the dup
@@ -34,4 +33,5 @@ public class Leetcode15_3Sum {
         
         return res;
     }
+    // Space O(N), Time O(N^2)
 }
