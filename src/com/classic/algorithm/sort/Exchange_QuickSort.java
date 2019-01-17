@@ -14,7 +14,6 @@ public class Exchange_QuickSort {
 			if (left < right) arr[right] = arr[left];
 		}
 
-		System.out.println("left = " + left + "  right = " + right + "  temp = " + temp);
 		arr[left] = temp;
 
 		return left;

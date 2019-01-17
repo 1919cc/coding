@@ -46,13 +46,13 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
 public class Leetcode126WordLadderII {
 	// AC, by create a directed graph
     public List<List<String>> findLadders3(String beginWord, String endWord, List<String> wordList) {
-        List<List<String>> result = new LinkedList();
+        List<List<String>> result = new LinkedList<>();
         if (wordList == null || wordList.size() == 0) return result;
 
-        Set<String> words = new HashSet(wordList);
+        Set<String> words = new HashSet<>(wordList);
         if (!words.contains(endWord)) return result;
 
-        Map<String, List<String>> graph = new HashMap();
+        Map<String, List<String>> graph = new HashMap<>();
         Set<String> curLevel = new HashSet<>();
         curLevel.add(beginWord);
 
@@ -60,7 +60,7 @@ public class Leetcode126WordLadderII {
 
         while(!curLevel.isEmpty() && !isFound) {
             words.removeAll(curLevel);  // key to avoid TLE
-            Set<String> nextLevel = new HashSet();
+            Set<String> nextLevel = new HashSet<>();
             for (String s : curLevel) {
                 char[] cur = s.toCharArray();
                 graph.put(s, new LinkedList<String>());
@@ -84,7 +84,7 @@ public class Leetcode126WordLadderII {
         }
         if (!isFound) return result;
 
-        LinkedList<String> list = new LinkedList();
+        LinkedList<String> list = new LinkedList<>();
         DFS(graph, result, list, beginWord, endWord);
 
         return result;
@@ -121,7 +121,7 @@ public class Leetcode126WordLadderII {
 
 	// Time Limited exceed
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
-        Map<String, LinkedList<String>> map = new HashMap();
+        Map<String, LinkedList<String>> map = new HashMap<>();
         map.putIfAbsent(beginWord, new LinkedList<String>());
 
         List<List<String>> allRes = new LinkedList<List<String>>();
@@ -192,7 +192,7 @@ public class Leetcode126WordLadderII {
 
     // Time Limited exceed
     public List<List<String>> findLadders2(String beginWord, String endWord, List<String> wordList) {
-        Map<Integer, LinkedList<Integer>> map = new HashMap();
+        Map<Integer, LinkedList<Integer>> map = new HashMap<>();
 
         // beginWord -> -1
         gbegin = beginWord;
